@@ -1,0 +1,50 @@
+body {
+  background: #6c373f;
+  display: flex;
+  justify-content: center;
+}
+
+#alice-container {
+  width: 90vh;
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+    "a1 . ."
+    ". a2 ."
+    ". . a3";
+}
+
+#alice1 {
+  grid-area: a1;
+}
+
+#alice2 {
+  grid-area: a2;
+}
+
+#alice3 {
+  grid-area: a3;
+}
+
+#alice1,
+#alice2,
+#alice3 {
+  animation: aliceTumbling 2s forwards;
+}
+
+#alice2 {
+  animation-delay: 2s;
+}
+
+#alice3 {
+  animation-delay: 4s;
+}
+
+@keyframes aliceTumbling {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+  }
+}
